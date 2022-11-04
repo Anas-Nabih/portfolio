@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
-import 'package:flutter_profile/screens/components/animated_circle_progress_insecator.dart';
+import 'package:flutter_profile/screens/main_screen/components/animated_circle_progress_insecator.dart';
 
 class SkillsArea extends StatelessWidget {
   const SkillsArea({Key? key}) : super(key: key);

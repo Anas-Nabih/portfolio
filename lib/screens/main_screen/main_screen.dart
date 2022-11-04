@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
-import 'package:flutter_profile/screens/components/side_menu.dart';
+import 'package:flutter_profile/screens/main_screen/components/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({required this.children});
+
+  final List<Widget> children;
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +18,15 @@ class MainScreen extends StatelessWidget {
               Expanded(
                   flex: 2,
                   child: SideMenu()),
-              Expanded(
+               Expanded(
                   flex: 7,
-                  child: Container(
-                    color: Colors.blue,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2 ),
+                    child: Column(
+                      children: [
+                        ...children
+                      ],
+                    ),
                   )),
             ],
           ),

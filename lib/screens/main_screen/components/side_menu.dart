@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
-import 'package:flutter_profile/screens/components/area_info_text.dart';
-import 'package:flutter_profile/screens/components/coding.dart';
-import 'package:flutter_profile/screens/components/knowledge.dart';
-import 'package:flutter_profile/screens/components/my_info.dart';
-import 'package:flutter_profile/screens/components/skills_area.dart';
+
+import 'package:flutter_profile/screens/main_screen/components/area_info_text.dart';
+import 'package:flutter_profile/screens/main_screen/components/coding.dart';
+import 'package:flutter_profile/screens/main_screen/components/contacts.dart';
+import 'package:flutter_profile/screens/main_screen/components/knowledge.dart';
+import 'package:flutter_profile/screens/main_screen/components/my_info.dart';
+import 'package:flutter_profile/screens/main_screen/components/skills_area.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -26,7 +28,7 @@ class SideMenu extends StatelessWidget {
                   Divider(),Coding(),
                   Divider(),Knowledge(),
                 Divider(),
-                TextButton(onPressed: (){}, child: Text("Download CV"))],
+                Contacts()],
               ),
             ),
           )

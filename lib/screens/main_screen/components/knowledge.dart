@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
- import 'package:flutter_profile/screens/components/knowledge_label.dart';
+ import 'package:flutter_profile/screens/main_screen/components/knowledge_label.dart';
 
 class Knowledge extends StatelessWidget {
   const Knowledge({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
-import 'package:flutter_profile/screens/components/linear_progress_indicator.dart';
+import 'package:flutter_profile/screens/main_screen/components/linear_progress_indicator.dart';
 
 class Coding extends StatelessWidget {
   const Coding({Key? key}) : super(key: key);

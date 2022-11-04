@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile/screens/components/info_text.dart';
+ import 'package:flutter_profile/screens/main_screen/components/info_text.dart';
 
 class AreaInfoText extends StatelessWidget {
   const AreaInfoText({Key? key}) : super(key: key);
