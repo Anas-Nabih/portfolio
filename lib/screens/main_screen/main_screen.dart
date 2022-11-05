@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
                   flex: 7,
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2 ),
-                    child: Column(
+                    child: ListView(
                       children: [
                         ...children
                       ],
