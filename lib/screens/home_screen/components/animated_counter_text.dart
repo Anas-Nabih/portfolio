@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 
 class AnimatedCounterText extends StatelessWidget {
   const AnimatedCounterText({
@@ -18,7 +19,7 @@ class AnimatedCounterText extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headline6!
-              .copyWith(color: primaryColor),
+              .copyWith(color: primaryColor,fontSize: Responsive.isDesktop(context)? 20 : 15),
         ));
   }
 }

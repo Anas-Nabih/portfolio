@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 import 'package:flutter_profile/screens/home_screen/components/flutter_coded_text.dart';
 
 class FooterAnimatedText extends StatelessWidget {
@@ -14,7 +15,9 @@ class FooterAnimatedText extends StatelessWidget {
       style: Theme.of(context).textTheme.subtitle1!,
       child: Row(
         children: [
+          if(!Responsive.isMobileLarge(context))
           FlutterCodedText(),
+          if(!Responsive.isMobileLarge(context))
           SizedBox(
             width: defaultPadding / 2,
           ),
@@ -30,9 +33,11 @@ class FooterAnimatedText extends StatelessWidget {
                   speed: Duration(milliseconds: 60)),
             ],
           ),
+          if(!Responsive.isMobileLarge(context))
           SizedBox(
             width: defaultPadding / 2,
           ),
+          if(!Responsive.isMobileLarge(context))
           FlutterCodedText(),
         ],
       ),

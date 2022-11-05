@@ -11,7 +11,7 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: secondaryColor,
+      decoration: BoxDecoration(color: secondaryColor,borderRadius: BorderRadius.circular(defaultPadding / 2)),
       padding: EdgeInsets.all(defaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,7 +24,8 @@ class ProjectCard extends StatelessWidget {
           ),
           Spacer(),
           Text(project.description!,
-              style: TextStyle(height: 1.5)),
+              maxLines: 4,
+              style: TextStyle(height: 1.3)),
           Spacer(),
           TextButton(onPressed: (){}, child: Text("Read More >>",style: TextStyle(color: primaryColor),))
         ],

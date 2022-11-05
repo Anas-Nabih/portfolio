@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 import 'package:flutter_profile/screens/main_screen/components/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
@@ -10,11 +11,17 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: Responsive.isDesktop(context) ? null: AppBar(
+        backgroundColor: secondaryColor,
+        leading: Builder(builder:(context) => IconButton(onPressed: (){Scaffold.of(context).openDrawer();}, icon: Icon(Icons.menu))),
+      ),
+      drawer: SideMenu(),
       body: Center(
         child: Container(
           constraints: BoxConstraints(maxHeight: maxWidth),
           child: Row(
             children: [
+              if(Responsive.isDesktop(context))
               Expanded(
                   flex: 2,
                   child: SideMenu()),
@@ -22,10 +29,14 @@ class MainScreen extends StatelessWidget {
                   flex: 7,
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2 ),
-                    child: ListView(
-                      children: [
-                        ...children
-                      ],
+                    child: SingleChildScrollView(
+                      physics: BouncingScrollPhysics(),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          ...children
+                        ],
+                      ),
                     ),
                   )),
             ],

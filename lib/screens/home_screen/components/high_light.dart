@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 
 
 class HighLight extends StatelessWidget {
@@ -15,7 +16,7 @@ class HighLight extends StatelessWidget {
       children: [
         counter,
         SizedBox(width: defaultPadding / 2,),
-        Text(label,style: Theme.of(context).textTheme.subtitle1,)
+        Text(label,style: Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: Responsive.isDesktop(context)? 20 : 15),)
       ],
     );
   }

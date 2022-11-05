@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 import 'package:flutter_profile/screens/home_screen/components/footer_animated_text.dart';
 
 class HomeBanner extends StatelessWidget {
@@ -29,11 +30,15 @@ class HomeBanner extends StatelessWidget {
               children: [
                 Text(
                   "Discover My Amazing \nArt Space!",
-                  style: Theme.of(context).textTheme.headline3!.copyWith(
+                  style: Responsive.isDesktop(context) ? Theme.of(context).textTheme.headline3!.copyWith(
+                      fontWeight: FontWeight.bold, color: Colors.white) : Theme.of(context).textTheme.headline5!.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.white),
                 ),
+                if(Responsive.isMobileLarge(context))
+                SizedBox(height: defaultPadding/2,),
                 FooterAnimatedText(),
                 SizedBox(height: defaultPadding,),
+                if(!Responsive.isMobileLarge(context))
                 ElevatedButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(

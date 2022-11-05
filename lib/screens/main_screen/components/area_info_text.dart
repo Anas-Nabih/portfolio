@@ -11,6 +11,7 @@ class AreaInfoText extends StatelessWidget {
         InfoText(title: "Residence", text: "Egypt"),
         InfoText(title: "City", text: "Cairo"),
         InfoText(title: "Age", text: "24"),
+        InfoText(title: "Military service", text: "Currently serving "),
       ],
     );
   }

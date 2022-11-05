@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 
 class AnimatedCircularProgressIndicator extends StatelessWidget {
   const AnimatedCircularProgressIndicator({
@@ -37,7 +38,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
           SizedBox(height: defaultPadding / 2),
           Text(label,maxLines:1,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.subtitle1,),
+            style: Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: Responsive.isMobile(context)? 12 :  18 ),),
         ],
       ),
     );

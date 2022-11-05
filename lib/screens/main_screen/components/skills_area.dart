@@ -19,9 +19,10 @@ class SkillsArea extends StatelessWidget {
         ),
         Row(
           children: [
-            Expanded(child: AnimatedCircularProgressIndicator(label: "Flutter", percentage: .8,)),
-            Expanded(child: AnimatedCircularProgressIndicator(label: "Django", percentage: .65,)),
-            Expanded(child: AnimatedCircularProgressIndicator(label: "Firebase", percentage: .70,)),
+            Expanded(child: AnimatedCircularProgressIndicator(label: "CS50", percentage: .90,)),
+            Expanded(child: AnimatedCircularProgressIndicator(label: "Flutter", percentage: .88,)),
+            Expanded(child: AnimatedCircularProgressIndicator(label: "Android", percentage: .80,)),
+            Expanded(child: AnimatedCircularProgressIndicator(label: "Django", percentage: .75,)),
           ],
         )
       ],
